@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>定位布局</title>
+		<style>
+			body {
+				min-height: 300vh;
+			}
+			.sticky,
+			.static,
+			.relative,
+			.absolute {
+				background-color: rgba(233,12,12,0.1);
+				min-height: 100px;
+			}
+			
+			.fixed {
+				background-color: rgba(233,12,12,0.1);
+				min-height: 100px;
+				width: 30vw;
+			}
+			
+			.static > .position {
+				position: static;
+				top: 20px;
+				right: 0px;
+				padding: 10px 5px;
+				background-color: rgba(23,123, 231, 0.2);
+			}
+			
+			.relative > .position {
+				position: relative;
+				top: 20px;
+				right: 0px;
+				padding: 10px 5px;
+				background-color: rgba(23,123, 231, 0.2);
+			}
+			
+			.absolute {
+				position: relative;
+			}
+			
+			.absolute > .position {
+				position: absolute;
+				top: 20px;
+				right: 0px;
+				padding: 10px 5px;
+				background-color: rgba(23,123, 231, 0.2);
+			}
+			
+			.fixed > .position {
+				position: fixed;
+				top: 80px;
+				right: 0px;
+				padding: 10px 5px;
+				background-color: rgba(23,123, 231, 0.2);
+			}
+			
+			.sticky {
+				position: sticky;
+				top: 40px;
+				right: 0px;
+				background-color: rgba(223,123, 31, 0.7);
+			}
+			
+		</style>
+	</head>
+	<body>
+		<h3>静态定位：position: static</h3>
+		<div class="static">
+			<p class="position">静态定位</p>
+		</div>
+		<h3>相对定位：position: relative</h3>
+		<div class="relative">
+			<p class="position">相对定位</p>
+		</div>
+		<h3>绝对定位：position: absolute</h3>
+		<div class="absolute">
+			<p class="position">绝对定位</p>
+		</div>
+		<h3>固定定位：position: fixed</h3>
+		<div class="fixed">
+			<p class="position">固定定位</p>
+		</div>
+		<h3>粘性定位：position: sticky</h3>
+		<div class="sticky">
+			<p class="position">粘性定位</p>
+		</div>
+		
+		
+		<h1>没有设置定位</h1>
+		<h3>静态定位：position: static</h3>
+		<div class="static">
+			<p>静态定位</p>
+		</div>
+		<h3>相对定位：position: relative</h3>
+		<div class="relative">
+			<p>相对定位</p>
+		</div>
+		<h3>绝对定位：position: absolute</h3>
+		<div class="absolute">
+			<p>绝对定位</p>
+		</div>
+		<h3>固定定位：position: fixed</h3>
+		<div class="fixed">
+			<p>固定定位</p>
+		</div>
+	</body>
+</html>

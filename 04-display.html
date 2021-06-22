@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>display 属性</title>
+		<style>
+			span {
+				color: #B22222;
+				padding: 6px 3px;
+				background-color: rgba(123,12,231,0.3);
+				border-radius: 4px;
+			}
+			
+			div {
+				color: antiquewhite;
+				padding: 6px 3px;
+				background-color: rgba(23,12,231,0.3);
+				border-radius: 4px;
+			}
+			li {
+				/* display: block; */
+			}
+			.none {
+				display: none;
+			}
+			
+			.block {
+				display: block;
+			}
+			
+			.inline {
+				display: inline;
+			}
+			
+			.inline-span {
+				width: 40%;
+				height: 50px;
+			}
+			
+			.inline-block {
+				display: inline-block;
+			}
+		</style>
+	</head>
+	<body>
+		<h2>块级元素、行内元素</h2>
+		<h3>块级元素：HTML（超文本标记语言）中元素大多数都是“块级”元素或行内元素 (en-US)。块级元素占据其父元素（容器）的整个空间，因此创建了一个“块”。</h3>
+		<p>常见块级元素：div、p、ul、li...</p>
+		<p>例如：</p>
+		<div>我是一个块级元素 div </div>
+		
+		<h3>行内元素：一个行内元素只占据它对应标签的边框所包含的空间</h3>
+		<p>常见块级元素：span、a、input...</p>
+		<p>例如：</p>
+		<span>我是一个行内元素：span </span>
+		<h2>display 属性</h3>
+		<ul>
+			<li>none: 隐藏对应选择的标签</li>
+			<li>block: 此元素将显示为块级元素，此元素前后会带有换行符。</li>
+			<li>inline: 默认。此元素会被显示为内联元素，元素前后没有换行符。</li>
+			<li>inline-block: 行内块元素。</li>
+		</ul>
+		<h3># none: 隐藏对应选择的标签</h3>
+		<h4>设置前</h4>
+		<div class="">我被隐藏掉了</div>
+		<h4>设置后</h4>
+		<div class="none">我被隐藏掉了</div>
+
+		<h3># block: 此元素将显示为块级元素，此元素前后会带有换行符。</h3>
+		<h4>设置前</h4>
+		<span class="">我是行内元素: span</span>
+		<span class="">巧了，我也是行内元素: span</span>
+		<h4>设置后</h4>
+		<span class="block">我是行内元素: span</span>
+		<span class="block">巧了，我也是行内元素: span</span>
+		
+		<h3># inline: 默认。此元素会被显示为内联元素，元素前后没有换行符。</h3>
+		<h4>设置前</h4>
+		<div class="">我是块级元素: div </div>
+		<div class="">我也是块级元素: div </div>
+		<h4>设置后</h4>
+		<div class="inline">我是块级元素: div </div>
+		<div class="inline">我也是块级元素: div </div>
+		
+		<h3># inline: 行内块元素</h3>
+		<h4>设置前</h4>
+		<span class="inline-span">我是行内元素: span</span>
+		<span class="inline-span">巧了，我也是行内元素: span</span>
+		<h4>设置后</h4>
+		<span class="inline-span inline-block">我是行内元素: span</span>
+		<span class="inline-span inline-block">巧了，我也是行内元素: span</span>
+	</body>
+</html>
