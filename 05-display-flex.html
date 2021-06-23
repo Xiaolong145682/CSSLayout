@@ -3,8 +3,291 @@
 	<head>
 		<meta charset="utf-8">
 		<title>flex---伸缩盒子布局</title>
+		<style>
+			p {
+				font-size: 16px;
+				color: #231aff;
+				font-weight: bolder;
+			}
+			.set-flex-direction {
+				display: flex;
+				flex-direction: row;
+				background-color: rgba(123, 12, 32, 0.3);
+			}
+			
+			.sun {
+				width: 200px;
+				height: 50px;
+				line-height: 50px;
+				text-align: center;
+				font-size: 24px;
+				color: #ffffff;
+				background-color: #B22222;
+				margin-right: 16px;
+				margin-bottom: 16px;
+			}
+			
+			.sun1 {
+				width: 50px;
+				height: 50px;
+				text-align: center;
+				font-size: 16px;
+				color: #ffffff;
+				background-color: #B22222;
+				margin-right: 16px;
+				margin-bottom: 16px;
+			}
+			
+			.sun2 {
+				width: 50px;
+				height: 150px;
+				text-align: center;
+				font-size: 20px;
+				color: #ffffff;
+				background-color: #B22222;
+				margin-right: 16px;
+				margin-bottom: 16px;
+			}
+			
+			.sun3 {
+				width: 50px;
+				height: 250px;
+				text-align: center;
+				font-size: 24px;
+				color: #ffffff;
+				background-color: #B22222;
+				margin-right: 16px;
+				margin-bottom: 16px;
+			}
+			
+			.row-reverse {
+				flex-direction: row-reverse;
+			}
+			.column {
+				flex-direction: column;
+			}
+			.column-reverse {
+				flex-direction: column-reverse;
+			}
+			
+			.wrap {
+				flex-wrap: wrap;
+			}
+			.wrap-reverse {
+				flex-wrap: wrap-reverse;
+			}
+			
+			.set-flex-flow {
+				display: flex;
+				flex-flow: row wrap;
+			}
+			
+			.set-justify-content {
+				display: flex;
+				justify-content: flex-start;
+				background-color: rgba(123, 12, 32, 0.3);
+			}
+			.flex-end {
+				justify-content: flex-end;
+			}
+			.center {
+				justify-content: center;
+			}
+			.space-between {
+				justify-content: space-between;
+			}
+			.space-around {
+				justify-content: space-around;
+			}
+			
+			.set-align-items {
+				display: flex;
+				align-items: flex-start;
+				background-color: rgba(123, 12, 32, 0.3);
+			}
+			.align-items-flex-end {
+				align-items: flex-end;
+			}
+			.align-items-center {
+				align-items: center;
+			}
+			.align-items-baseline {
+				align-items: baseline;
+			}
+			.align-items-stretch {
+				align-items: stretch;
+			}
+			
+			.align-items-stretch .sunn {
+				width: 50px;
+				text-align: center;
+				font-size: 20px;
+				color: #ffffff;
+				background-color: #B22222;
+				margin-right: 16px;
+				margin-bottom: 16px;
+			}
+			
+		</style>
 	</head>
 	<body>
 		<h2>flex 伸缩盒子布局</h2>
+		<h3>设置 flex 布局</h3>
+		<p>给容器设置属性：display: flex </p>
+		<h3>容器相关属性</h3>
+		<ul>
+			<li>flex-direction: 设置主轴的延伸方向</li>
+			<li>flex-wrap: 设置项目内容是否允许换行</li>
+			<li>flex-flow: 将上门两个属性合二为一</li>
+			<li>justify-content: 设置项目内容在主轴延伸方向上的排列方式</li>
+			<li>align-items: 设置项目内容在主轴上的对齐方式</li>
+			<li>align-content: 设置多根主轴在垂直于主轴方向上的排列方式</li>
+		</ul>
+		<h4>flex-direction: 设置主轴的延伸方向</h4>
+		<p>可选值：row | row-reverse | column | column-reverse</p>
+		<p>## 设置为：row</p>
+		<div class="set-flex-direction">
+			<div class="sun">1</div>
+			<div class="sun">2</div>
+			<div class="sun">3</div>
+			<div class="sun">4</div>
+		</div>
+		<p>## 设置为：row-reverse</p>
+		<div class="set-flex-direction row-reverse">
+			<div class="sun">1</div>
+			<div class="sun">2</div>
+			<div class="sun">3</div>
+			<div class="sun">4</div>
+		</div>
+		<p>## 设置为：column</p>
+		<div class="set-flex-direction column">
+			<div class="sun">1</div>
+			<div class="sun">2</div>
+			<div class="sun">3</div>
+			<div class="sun">4</div>
+		</div>
+		<p>## 设置为：column-reverse</p>
+		<div class="set-flex-direction column-reverse">
+			<div class="sun">1</div>
+			<div class="sun">2</div>
+			<div class="sun">3</div>
+			<div class="sun">4</div>
+		</div>
+
+		<h4>flex-wrap: 设置项目内容是否允许换行</h4>
+		<p>可选值：nowrap | wrap | wrap-reverse;</p>
+		<p>## 设置为： nowrap</p>
+		<div class="set-flex-direction">
+			<div class="sun">1</div>
+			<div class="sun">2</div>
+			<div class="sun">3</div>
+			<div class="sun">4</div>
+			<div class="sun">5</div>
+			<div class="sun">6</div>
+			<div class="sun">7</div>
+		</div>
+		<p>## 设置为： wrap</p>
+		<div class="set-flex-direction wrap">
+			<div class="sun">1</div>
+			<div class="sun">2</div>
+			<div class="sun">3</div>
+			<div class="sun">4</div>
+			<div class="sun">5</div>
+			<div class="sun">6</div>
+			<div class="sun">7</div>
+		</div>
+		<p>## 设置为： wrap</p>
+		<div class="set-flex-direction wrap-reverse">
+			<div class="sun">1</div>
+			<div class="sun">2</div>
+			<div class="sun">3</div>
+			<div class="sun">4</div>
+			<div class="sun">5</div>
+			<div class="sun">6</div>
+			<div class="sun">7</div>
+			<div class="sun">8</div>
+			<div class="sun">9</div>
+		</div>
+
+		<h4>flex-flow: 将上门两个属性合二为一</h4>
+		<p>## 设置为： flex-flow: flex-direction flex-wrap; </p>
+		<p>例如：flex-flow: row wrap;</p>
+		<div class="set-flex-flow">
+			<div class="sun">1</div>
+			<div class="sun">2</div>
+			<div class="sun">3</div>
+			<div class="sun">4</div>
+			<div class="sun">5</div>
+			<div class="sun">6</div>
+			<div class="sun">7</div>
+			<div class="sun">8</div>
+			<div class="sun">9</div>
+		</div>
+		
+		<h4>justify-content: 设置项目内容在主轴延伸方向上的排列方式</h4>
+		<p>可选值：flex-start | flex-end | center | space-between | space-around</p>
+		<p>## 设置为： flex-start</p>
+		<div class="set-justify-content">
+			<div class="sun">1</div>
+			<div class="sun">2</div>
+			<div class="sun">3</div>
+		</div>
+		<p>## 设置为： flex-end</p>
+		<div class="set-justify-content flex-end">
+			<div class="sun">1</div>
+			<div class="sun">2</div>
+			<div class="sun">3</div>
+		</div>
+		<p>## 设置为： center</p>
+		<div class="set-justify-content center">
+			<div class="sun">1</div>
+			<div class="sun">2</div>
+			<div class="sun">3</div>
+		</div>
+		<p>## 设置为： space-between</p>
+		<div class="set-justify-content space-between">
+			<div class="sun">1</div>
+			<div class="sun">2</div>
+			<div class="sun">3</div>
+		</div>
+		<p>## 设置为： space-around</p>
+		<div class="set-justify-content space-around">
+			<div class="sun">1</div>
+			<div class="sun">2</div>
+			<div class="sun">3</div>
+		</div>
+		
+		<h4>align-items: 设置项目内容在主轴上的对齐方式</h4>
+		<p>可选值：flex-start | flex-end | center | baseline | stretch</p>
+		<p>## 设置为： flex-start</p>
+		<div class="set-align-items">
+			<div class="sun1">1</div>
+			<div class="sun2">2</div>
+			<div class="sun3">3</div>
+		</div>
+		<p>## 设置为： flex-end </p>
+		<div class="set-align-items align-items-flex-end ">
+			<div class="sun1">1</div>
+			<div class="sun2">2</div>
+			<div class="sun3">3</div>
+		</div>
+		<p>## 设置为： center </p>
+		<div class="set-align-items align-items-center ">
+			<div class="sun1">1</div>
+			<div class="sun2">2</div>
+			<div class="sun3">3</div>
+		</div>
+		<p>## 设置为： baseline </p>
+		<div class="set-align-items align-items-baseline ">
+			<div class="sun1">我是第一个</div>
+			<div class="sun2">我是第二个</div>
+			<div class="sun3">我是第三个</div>
+		</div>
+		<p>## 设置为： stretch </p>
+		<div style="height: 200px;" class="set-align-items align-items-stretch ">
+			<div class="sunn">1</div>
+			<div class="sunn">2</div>
+			<div class="sunn">3</div>
+		</div>
 	</body>
 </html>

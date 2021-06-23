@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>grid 网格布局</title>
+		<style>
+			.set-grid {
+				width: 100%;
+				display: grid;
+				grid-template-columns: 1fr 1fr 1fr;
+				grid-template-rows: 150px 150px 150px;
+				color: #FFFFFF;
+				grid-row-gap: 20px;
+				grid-column-gap: 20px;
+				font-size: 24px;
+				grid-auto-rows: 250px; 
+			}
+			
+			.header {
+				grid-column-start: 1;
+				grid-column-end: 4;
+				grid-row-start: 1;
+				grid-row-end: 2;
+				background-color: black;
+			}
+			
+			.footer {
+				grid-column-start: 1;
+				grid-column-end: 4;
+				grid-row-start: 6;
+				grid-row-end: 7;
+				background-color: #A100B0;
+			}
+			
+			.item1 {
+				grid-column-start: 1;
+				grid-column-end: 3;
+				grid-row-start: 2;
+				grid-row-end: 4;
+				background-color: #B22222;
+			}
+			
+			.item2 {
+				background-color: #20B2AA;
+			}
+			
+			.item3 {
+				background-color: #20B2AA;
+			}
+			
+			.item4 {
+				grid-column-start: 3;
+				grid-column-end: 4;
+				grid-row-start: 3;
+				grid-row-end: 5;
+				background-color: #a100b0;
+			}
+			
+			.item5 {
+				background-color: #20B2AA;
+			}
+			
+			.item6 {
+				grid-column-start: 1;
+				grid-column-end: 3;
+				background-color: #20B2AA;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<h2>grid 网格布局</h2>
+		<div class="set-grid">
+			<div class="header">header</div>
+			<div class="item1">1</div>
+			<div class="item2">2</div>
+			<div class="item3">3</div>
+			<div class="item4">4</div>
+			<div class="item5">5</div>
+			<div class="item6">6</div>
+			<div class="footer">footer</div>
+		</div>
+	</body>
+</html>
